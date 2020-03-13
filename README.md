@@ -8,8 +8,8 @@ Usage Description -
 Clone or direct download CPicker file and Cancel Image from master repo.
 Drag and drop into your react native project.
 
-import React, { Component } from 'react';
-import { View,Alert,TouchableOpacity,Text} from 'react-native';
+import React, { Component } from 'react';           
+import { View,Alert,TouchableOpacity,Text} from 'react-native';          
 import CPicker from '.CPicker'
 
 export default class YourClass extends React.Component  { 
@@ -27,22 +27,21 @@ render() {
 
 return (
 
-<View style={{justifyContent:'center',alignItems:'center'}}>
+<View style={{justifyContent:'center',alignItems:'center'}}
 
-<TouchableOpacity onPress={()=>this.setState({showPicker:true})>
-<Text>Click Me!</Text>
-</TouchableOpacity>
+<TouchableOpacity style={{height:20,width:20,backgroundColor:'red'}} onPress={()=>this.setState({showPicker:true})/>
 
 <CPicker
+
+
 showPicker={this.state.showPicker} 
 arr = {this.state.pickerArr}
 handleClose={()=>this.setState({showPicker:false})}
 title={"Select Options"}
 
-handleSubmit={this.handleSubmit}>
+handleSubmit={this.handleSubmit}/>
 
-</CPicker>
-
+/>
 </View>
 
 );
